@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EnergizeMe</string>
+    <string name="calculate">Calculate</string>
+    <string name="calories">Calories</string>
+    <string name="add">Add</string>
+    <string name="meal">Meal</string>
+</resources>

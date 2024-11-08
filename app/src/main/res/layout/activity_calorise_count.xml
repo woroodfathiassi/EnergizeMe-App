@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaloriseCountActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/mainColor"
+        android:fontFamily="serif"
+        android:paddingVertical="5dp"
+        android:text="My Calories"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Track your daily calorie intake 😋🍽️!"
+                android:padding="15dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add your meal and calorie details."
+                android:padding="10dp"
+                android:layout_marginTop="0dp"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/ETmeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/meal"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/Emeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:padding="3dp"
+                android:textColor="#FF0202"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ETcalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/calories"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/Ecalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:padding="3dp"
+                android:textColor="#FF0202"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/butAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:backgroundTint="@color/mainColor"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:fillViewport="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_margin="10dp">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+
+                    <!-- Table Header Row -->
+                    <TableRow
+                        android:padding="8dp"
+                        android:background="@drawable/rounded_corners_only"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/meal"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/calories"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+
+                    </TableRow>
+
+                </TableLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/butCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/mainColor"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
